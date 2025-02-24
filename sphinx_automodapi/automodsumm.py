@@ -613,7 +613,7 @@ def generate_automodsumm_docs(lines, srcfn, app=None, suffix='.rst',
                     get_members_mod(obj, 'class')
                 ns['exceptions'], ns['all_exceptions'] = \
                     get_members_mod(obj, 'exception')
-            elif doc.objtype == 'class':
+            elif doc.objtype in ('class', 'exception'):
                 if inherited_mem is not None:
                     # option set in this specifc directive
                     include_base = inherited_mem
